@@ -1,0 +1,73 @@
+body {
+    font-family: 'Pretendard', sans-serif; /* A modern, readable font */
+}
+
+/* Professional Button Styles */
+.btn-primary {
+    @apply px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.btn-secondary {
+    @apply px-6 py-3 bg-blue-800 text-white rounded-lg shadow-lg hover:bg-blue-900 transition duration-300 ease-in-out;
+    font-weight: 500;
+}
+
+/* Specific styles for pagination buttons */
+.pagination-button {
+    @apply text-white bg-gray-700 shadow-md hover:bg-gray-600 px-6 py-3 rounded-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.pagination-button:disabled {
+    @apply bg-gray-800 text-gray-500 cursor-not-allowed shadow-inner;
+}
+
+/* Active Nav Link Style */
+.nav-link.active {
+    @apply text-blue-600 font-bold;
+}
+
+/* Spinner for AI Assistant */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #3b82f6; /* Blue color for spinner */
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin-right: 8px; /* Space between spinner and text */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Animation for Hero text */
+@keyframes fade-grow-sparkle {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+        text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    75% {
+        opacity: 1;
+        transform: scale(1);
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6); /* Sparkle effect */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        text-shadow: 0 0 0 rgba(255, 255, 255, 0); /* Fade out sparkle */
+    }
+}
+
+.animate-fade-grow-sparkle {
+    animation: fade-grow-sparkle 3s ease-out forwards;
+} 

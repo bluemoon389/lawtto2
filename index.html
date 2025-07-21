@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>법률사무소 LAWTTO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+
+    <div id="app" class="flex flex-col min-h-screen">
+        <!-- Header -->
+        <header class="bg-white shadow-md py-4 px-6 md:px-12 sticky top-0 z-50">
+            <nav class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-4 md:mb-0">
+                    <a href="#!" onclick="showPage('home')" class="flex items-center">
+                        <div class="flex items-center justify-center space-x-2">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 shadow-md relative">
+                                <div class="flex items-baseline leading-none">
+                                    <span class="text-2xl font-bold text-black">A</span>
+                                    <span class="text-lg font-bold text-black relative">
+                                        <div class="absolute top-1/2 left-1/2 h-0.5 bg-black rounded-full" style="width: 150%; transform: translate(-50%, -50%); box-shadow: 0 1px 3px rgba(0,0,0,0.5);"></div>
+                                        ll
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="text-4xl font-bold tracking-tight"><span class="bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent">Law</span><span class="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">tto</span></div>
+                        </div>
+                    </a>
+                </div>
+                <ul class="flex flex-wrap justify-center md:flex-nowrap md:space-x-8 text-lg">
+                    <li><a href="#!" class="nav-link text-gray-700 hover:text-blue-600 py-2 px-3 rounded-md transition duration-300" data-page="home" onclick="showPage('home')">홈</a></li>
+                    <li><a href="#!" class="nav-link text-gray-700 hover:text-blue-600 py-2 px-3 rounded-md transition duration-300" data-page="about" onclick="showPage('about')">법률사무소 소개</a></li>
+                    <li><a href="#!" class="nav-link text-gray-700 hover:text-blue-600 py-2 px-3 rounded-md transition duration-300" data-page="practice-areas" onclick="showPage('practice-areas')">전문분야</a></li>
+                    <li><a href="#!" class="nav-link text-gray-700 hover:text-blue-600 py-2 px-3 rounded-md transition duration-300" data-page="case-results" onclick="showPage('case-results')">업무실적</a></li>
+                    <li><a href="#!" class="nav-link text-gray-700 hover:text-blue-600 py-2 px-3 rounded-md transition duration-300" data-page="news-articles" onclick="showPage('news-articles')">뉴스&기사</a></li>
+                    <li><a href="#!" class="nav-link text-gray-700 hover:text-blue-600 py-2 px-3 rounded-md transition duration-300" data-page="contact" onclick="showPage('contact')">문의</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="flex-grow">
+            <!-- Home Page -->
+            <div id="home" class="page-content">
+                <section id="hero-main" class="relative h-[80vh] flex items-start justify-center text-center text-white overflow-hidden bg-black">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://www.dropbox.com/scl/fi/i6q410z2s137452123/1.png?rlkey=v8106p1j4z3w789123&raw=1')"></div>
+                    <div class="absolute inset-0 bg-black opacity-60"></div>
+                    <div class="relative z-10 max-w-4xl mx-auto px-6 pt-24 pb-6 rounded-xl">
+                        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-grow-sparkle">
+                            <span class="block">토지보상, 아는 만큼 받습니다</span>
+                        </h1>
+                        <p class="text-lg md:text-xl font-light mb-10 opacity-90">
+                            법률사무소 LAWTTO는 토지보상 및 수용분야의 독보적인 전문성으로<br />
+                            의뢰인의 최대 권리와 보상금을 추구합니다.
+                        </p>
+                    </div>
+                </section>
+                <section id="info-links" class="bg-gray-900 py-16 px-6 md:px-12 rounded-xl shadow-lg mb-8 mx-auto container -mt-64 relative z-20">
+                    <h3 class="text-3xl font-bold text-white mb-10 text-center">LAWTTO의 다양한 소식과 정보를 만나세요</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <a href="https://www.youtube.com/@LAWTTOTV-de4ss" target="_blank" rel="noopener noreferrer" class="block">
+                            <div class="p-6 rounded-lg shadow-md flex flex-col items-center justify-center bg-gray-800 hover:shadow-xl transition duration-300 h-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-16 h-16 text-red-500 mr-4"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.18-48.437-48.461C458.665 64 288 64 288 64S117.335 64 74.787 75.622c-23.65 6.281-42.18 24.787-48.461 48.437C16 165.335 16 256 16 256s0 90.665 11.622 133.213c6.281 23.65 24.787 42.18 48.437 48.461C117.335 448 288 448 288 448s170.665 0 213.213-11.622c23.65-6.281 42.18-24.787 48.461-48.437C560 346.665 560 256 560 256s0-90.665-10.345-131.917zM229.06 354.936V157.064L384 256l-154.94 98.936z"/></svg>
+                                <p class="text-white font-semibold text-xl">Lawtto TV</p>
+                                <p class="text-gray-300 text-md">토지보상 전문채널</p>
+                            </div>
+                        </a>
+                        <a href="https://www.youtube.com/@토지보상실무연구회" target="_blank" rel="noopener noreferrer" class="block">
+                            <div class="p-6 rounded-lg shadow-md flex flex-col items-center justify-center bg-gray-800 hover:shadow-xl transition duration-300 h-full">
+                                <div class="flex items-center mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-16 h-16 text-red-500 mr-4"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.18-48.437-48.461C458.665 64 288 64 288 64S117.335 64 74.787 75.622c-23.65 6.281-42.18 24.787-48.461 48.437C16 165.335 16 256 16 256s0 90.665 11.622 133.213c6.281 23.65 24.787 42.18 48.437 48.461C117.335 448 288 448 288 448s170.665 0 213.213-11.622c23.65-6.281 42.18-24.787 48.461-48.437C560 346.665 560 256 560 256s0-90.665-10.345-131.917zM229.06 354.936V157.064L384 256l-154.94 98.936z"/></svg>
+                                    <div class="flex flex-col items-start">
+                                        <p class="text-white font-semibold text-xl leading-tight">토지보상</p>
+                                        <p class="text-white font-semibold text-lg leading-tight">실무연구회</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300 text-md">보상실무 전문가 채널</p>
+                            </div>
+                        </a>
+                        <div class="p-6 rounded-lg shadow-md flex flex-col items-center justify-center text-center bg-gray-800 h-full cursor-pointer hover:shadow-xl transition duration-300" onclick="showPage('contact')">
+                            <div class="text-blue-400 text-4xl font-bold mb-2">상담/문의</div>
+                            <p class="text-white font-semibold text-2xl">02-592-9657</p>
+                        </div>
+                        <div class="p-6 rounded-lg shadow-md flex flex-col items-center justify-center text-center bg-gray-800 h-full cursor-pointer hover:shadow-xl transition duration-300" onclick="showPage('news-articles')">
+                            <div class="flex flex-col items-center mb-4">
+                                <p class="text-white font-extrabold text-3xl bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent leading-none">로우토</p>
+                                <p class="text-white font-bold text-4xl bg-gradient-to-r from-blue-300 to-cyan-200 bg-clip-text text-transparent leading-none">뉴-스</p>
+                            </div>
+                            <p class="text-gray-300 text-md">언론 보도, 기사</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- About Page -->
+            <div id="about" class="page-content hidden">
+                 <section class="content-section active bg-gray-900 p-8 rounded-xl shadow-lg mb-8 container mx-auto">
+                    <h2 class="text-3xl font-bold text-white mb-6 border-b-2 pb-3 border-blue-300">법률사무소 LAWTTO 소개</h2>
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-inner mb-10">
+                        <div class="mb-10">
+                            <h3 class="text-2xl font-semibold text-blue-300 mb-4">설립 취지</h3>
+                            <p class="text-gray-300 leading-relaxed text-lg">
+                                법률사무소 LAWTTO는 설립 당시, 국가 등 사업시행자의 일방적인 사업 진행으로 인해 지식과 경험 부족으로 권리 침해에 적절히 대응하지 못하는 토지 소유자들의 어려움에 깊이 공감하였습니다. 또한, 보상 실무 현장에서 전문성을 갖춘 변호사 등 전문 인력의 부재와 잘못된 정보 및 오해로 인한 혼선이 가중되어 투명하고 정당한 보상 관행을 기대하기 어려운 상황을 개선하고자 설립되었습니다.
+                            </p>
+                            <p class="text-gray-300 leading-relaxed text-lg mt-4">
+                                저희는 이러한 문제의식 아래, 토지 및 수용 분야에 대한 심도 깊은 연구를 지속하고 관련 연구회 활동을 통해 실무에 적용 가능한 학문적 성과들을 체계적으로 정리해 왔습니다. 이를 바탕으로 독보적인 전문성을 확보하여 토지 보상 현장에서 의뢰인의 최대 권익을 보호하고, 투명하고 공정한 보상이 이루어지도록 끊임없이 노력하고 있습니다.
+                            </p>
+                        </div>
+                        <div class="mb-10">
+                            <h3 class="text-2xl font-semibold text-blue-300 mb-6">변호사 소개</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                                    <img src="https://search.pstatic.net/common?type=b&size=3000&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F20%2F201303051606532411.jpg" alt="류창용 변호사 사진" class="w-36 h-36 rounded-full object-cover mb-4 border-4 border-blue-300" />
+                                    <h4 class="text-xl font-bold text-white">류창용 변호사</h4>
+                                    <p class="text-md text-gray-300 mb-3">대표 변호사</p>
+                                    <button class="btn-secondary" onclick="showLawyerDetail('ryu')">자세히 보기</button>
+                                </div>
+                                <div class="bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                                    <img src="https://placehold.co/150x150/e0e7ff/3b82f6?text=변호사+사진" alt="유동현 변호사 사진" class="w-36 h-36 rounded-full object-cover mb-4 border-4 border-blue-300" />
+                                    <h4 class="text-xl font-bold text-white">유동현 변호사</h4>
+                                    <p class="text-md text-gray-300 mb-3">소속 변호사</p>
+                                    <button class="btn-secondary" onclick="showLawyerDetail('yoo')">자세히 보기</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-blue-300 mb-6">LAWTTO 협업 및 자문기관</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                                <a href="https://cafe.naver.com/kalecl/48" target="_blank" rel="noopener noreferrer" class="block">
+                                    <div class="bg-gray-700 p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center text-center h-full">
+                                        <svg class="w-16 h-16 text-indigo-400 mb-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 5c-1.11-.35-2.3-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 5.5 1 6v14c1.1-.35 2.29-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5s4.05.4 5.5 1.5V5zm-2 14c-1.1-.35-2.29-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5V6c1.1-.35 2.29-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5v13z"/></svg>
+                                        <h4 class="text-lg font-semibold text-white mb-1">(사)한국토지보상법연구</h4>
+                                        <p class="text-gray-300 text-xs">토지보상법 연구 및 실무</p>
+                                    </div>
+                                </a>
+                                <a href="https://www.msapp.co.kr/" target="_blank" rel="noopener noreferrer" class="block">
+                                    <div class="p-6 rounded-lg shadow-md flex flex-col items-center justify-center text-center bg-gray-800 hover:shadow-xl transition duration-300 h-full">
+                                        <svg class="w-16 h-16 text-blue-400 mb-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                                        <h4 class="text-lg font-semibold text-white mb-1">(주)미래새한감정평가법인</h4>
+                                        <p class="text-gray-300 text-xs">감정평가 및 보상 컨설팅</p>
+                                    </div>
+                                </a>
+                                <a href="https://www.sekyoung.net/" target="_blank" rel="noopener noreferrer" class="block">
+                                    <div class="bg-gray-700 p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center text-center h-full">
+                                        <svg class="w-16 h-16 text-green-400 mb-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 12h-2V8h-2v4h-2v4h-2v-4h-2v4H9V8H7v4H5V8H3v12h18V8h-2v4zM12 2L1 6v2h22V6L12 2z"/></svg>
+                                        <h4 class="text-lg font-semibold text-white mb-1">세경평가법인(주)</h4>
+                                        <p class="text-gray-300 text-xs">부동산 감정평가 및 컨설팅</p>
+                                    </div>
+                                </a>
+                                <a href="https://www.blog.naver.com/pekary" target="_blank" rel="noopener noreferrer" class="block">
+                                    <div class="bg-gray-700 p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center text-center h-full">
+                                        <svg class="w-16 h-16 text-purple-400 mb-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 17h-2v-4h-2v4h-2v-4h-2v4h-2v-4H9v4H7v-4H5v4H3v-4H1v8h22v-8h-2zm-10 0H7v-4h4v4zm6 0h-4v-4h4v4zm6 0h-4v-4h4v4zM12 2L1 6v2h22V6L12 2z"/></svg>
+                                        <h4 class="text-lg font-semibold text-white mb-1">법률사무소 강변</h4>
+                                        <p class="text-gray-300 text-xs">부동산 전문 법률 자문</p>
+                                    </div>
+                                </a>
+                                <div class="bg-gray-700 p-4 rounded-lg shadow-md flex flex-col items-center text-center h-full">
+                                    <svg class="w-16 h-16 text-orange-400 mb-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                                    <h4 class="text-lg font-semibold text-white mb-1">세무법인 네오텍스</h4>
+                                    <p class="text-gray-300 text-xs">세무 자문 및 회계 서비스</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Lawyer Detail Page -->
+            <div id="lawyer-detail" class="page-content hidden">
+                 <section class="content-section active bg-gray-900 p-8 rounded-xl shadow-lg mb-8 container mx-auto">
+                    <h2 id="lawyer-detail-name" class="text-3xl font-bold text-white mb-6 border-b-2 pb-3 border-blue-300"></h2>
+                    <div id="lawyer-detail-content" class="text-gray-300 leading-relaxed text-lg"></div>
+                    <button class="mt-8 btn-secondary" onclick="hideLawyerDetail()">목록으로 돌아가기</button>
+                </section>
+            </div>
+
+            <!-- Practice Areas Page -->
+            <div id="practice-areas" class="page-content hidden">
+                 <section class="content-section active bg-gray-900 p-8 rounded-xl shadow-lg mb-8 container mx-auto">
+                    <h2 class="text-3xl font-bold text-white mb-6 border-b-2 pb-3 border-blue-300">전문 분야</h2>
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-inner">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                                <h3 class="text-xl font-semibold text-blue-300 mb-3">토지 보상 및 수용 사건 일반</h3>
+                                <p class="text-gray-300 text-sm mb-4">수용재결, 이의재결, 보상금증액소송 등</p>
+                                <button class="btn-secondary" onclick="showPracticeAreaDetail('area1')">자세히 보기</button>
+                            </div>
+                            <div class="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                                <h3 class="text-xl font-semibold text-blue-300 mb-3">도로, 철도사업 관련 민원 및 소송</h3>
+                                <p class="text-gray-300 text-sm mb-4">잔여지 및 설계 관련</p>
+                                <button class="btn-secondary" onclick="showPracticeAreaDetail('area2')">자세히 보기</button>
+                            </div>
+                            <div class="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                                <h3 class="text-xl font-semibold text-blue-300 mb-3">장기미집행 도시계획시설(공원) 관련 민원 및 소송</h3>
+                                <p class="text-gray-300 text-sm mb-4">미집행 도시계획시설 관련 법률 자문 및 소송</p>
+                                <button class="btn-secondary" onclick="showPracticeAreaDetail('area3')">자세히 보기</button>
+                            </div>
+                            <div class="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                                <h3 class="text-xl font-semibold text-blue-300 mb-3">행정계획 등과 관련된 민원 및 소송</h3>
+                                <p class="text-300 text-sm mb-4">국민권익위 고충민원 등 행정 절차 및 소송</p>
+                                <button class="btn-secondary" onclick="showPracticeAreaDetail('area4')">자세히 보기</button>
+                            </div>
+                            <div class="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                                <h3 class="text-xl font-semibold text-blue-300 mb-3">공장, 축산 등 특수분야 집단민원 및 소송</h3>
+                                <p class="text-gray-300 text-sm mb-4">특수 산업 분야의 집단 민원 및 법적 대응</p>
+                                <button class="btn-secondary" onclick="showPracticeAreaDetail('area5')">자세히 보기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="practice-area-detail-container" class="hidden mt-10 p-8 bg-gray-800 rounded-xl shadow-inner">
+                        <h3 id="practice-area-detail-title" class="text-2xl font-bold text-blue-300 mb-4"></h3>
+                        <div id="practice-area-detail-content" class="text-gray-300 leading-relaxed"></div>
+                        <button class="mt-6 btn-secondary" onclick="hidePracticeAreaDetail()">목록으로 돌아가기</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Case Results Page -->
+            <div id="case-results" class="page-content hidden">
+                <section class="content-section active bg-gray-900 p-8 rounded-xl shadow-lg mb-8 container mx-auto">
+                    <h2 class="text-3xl font-bold text-white mb-6 border-b-2 pb-3 border-blue-300">업무 실적</h2>
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-inner">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                                <h3 class="text-xl font-semibold text-blue-300 mb-3">업무 수행 주요 사업</h3>
+                                <p class="text-gray-300 text-sm mb-4">LAWTTO가 수행한 주요 프로젝트 목록입니다.</p>
+                                <button class="btn-secondary" onclick="showCaseResultDetail('major-projects')">자세히 보기</button>
+                            </div>
+                            <div class="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                                <h3 class="text-xl font-semibold text-blue-300 mb-3">주요 업무 성공 사례</h3>
+                                <p class="text-gray-300 text-sm mb-4">LAWTTO의 성공적인 사건 해결 사례를 소개합니다.</p>
+                                <button class="btn-secondary" onclick="showCaseResultDetail('successful-cases')">자세히 보기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="case-result-detail-container" class="hidden mt-10 p-8 bg-gray-800 rounded-xl shadow-inner">
+                        <h3 id="case-result-detail-title" class="text-2xl font-bold text-blue-300 mb-4"></h3>
+                        <div id="case-result-detail-content" class="space-y-6"></div>
+                        <div id="case-result-pagination-container" class="flex justify-between mt-8">
+                            <button id="case-result-prev-btn" class="pagination-button px-6 py-3 rounded-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500">이전</button>
+                            <span id="case-result-page-info" class="text-gray-300 text-lg"></span>
+                            <button id="case-result-next-btn" class="pagination-button px-6 py-3 rounded-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500">다음</button>
+                        </div>
+                        <button class="mt-6 btn-secondary" onclick="hideCaseResultDetail()">목록으로 돌아가기</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- News & Articles Page -->
+            <div id="news-articles" class="page-content hidden">
+                <section class="content-section active bg-gray-900 p-8 rounded-xl shadow-lg mb-8 container mx-auto">
+                    <h2 class="text-3xl font-bold text-white mb-6 border-b-2 pb-3 border-blue-300">뉴스 & 기사</h2>
+                    <div class="overflow-x-auto bg-gray-800 p-8 rounded-xl shadow-inner">
+                        <table class="min-w-full rounded-lg shadow-md">
+                            <thead>
+                                <tr class="bg-gray-700 text-left text-white uppercase text-sm leading-normal">
+                                    <th class="py-3 px-6 text-left rounded-tl-lg">제목</th>
+                                    <th class="py-3 px-6 text-left rounded-tr-lg">관련 링크</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-300 text-lg">
+                                <tr class="border-b border-gray-700 hover:bg-gray-700 transition duration-300">
+                                    <td class="py-4 px-6">
+                                        <span class="bg-gray-700 p-1 rounded text-gray-200">Lawtto 자문 세종스마트국가산단 주민대책위 소식:</span><br />
+                                        축산벨트 집단폐업보상 관련 권익위 부위원장 와촌리 방문(2507)
+                                    </td>
+                                    <td class="py-4 px-6"><a href="https://www.sisatoday.co.kr/amp/1065621964701726" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">시사투데이 기사보기</a></td>
+                                </tr>
+                                <tr class="border-b border-gray-700 hover:bg-gray-700 transition duration-300">
+                                    <td class="py-4 px-6">
+                                        <span class="bg-gray-700 p-1 rounded text-gray-200">Lawtto 자문 세종스마트국가산단 주민대책위 소식:</span><br />
+                                        농민 공익직불금 지급 국민권익위 의견표명(2410)
+                                    </td>
+                                    <td class="py-4 px-6"><a href="https://www.m-i.kr/news/articleView.html?idxno=1167363" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">매일일보 기사보기</a></td>
+                                </tr>
+                                <tr class="border-b border-gray-700 hover:bg-gray-700 transition duration-300">
+                                    <td class="py-4 px-6">
+                                        <span class="bg-gray-700 p-1 rounded text-gray-200">Lawtto 자문 세종스마트국가산단 주민대책위 소식:</span><br />
+                                        세종시, 산단 편입지역 재산세 감면 연내 시행(2409)
+                                    </td>
+                                    <td class="py-4 px-6"><a href="https://cc.newdaily.co.kr/site/data/html/2024/09/13/2024091300005.html" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">뉴데일리 충청*세종 기사보기</a></td>
+                                </tr>
+                                <tr class="border-b border-gray-700 hover:bg-gray-700 transition duration-300">
+                                    <td class="py-4 px-6">
+                                        <span class="bg-gray-700 p-1 rounded text-gray-200">LAWTTO 대표변호사 칼럼:</span><br />
+                                        [전문분야이야기] 도시공원 일몰제 시행 5년의 단상(2502)
+                                    </td>
+                                    <td class="py-4 px-6"><a href="https://news.koreanbar.or.kr/news/articleView.html?idxno=32742" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">법조신문 칼럼보기</a></td>
+                                </tr>
+                                <tr class="border-b border-gray-700 hover:bg-gray-700 transition duration-300">
+                                    <td class="py-4 px-6">
+                                        <span class="bg-gray-700 p-1 rounded text-gray-200">LAWTTO 대표변호사 칼럼:</span><br />
+                                        [전문분야이야기] 대규모 공익사업지구 토지소유자 추천 감정평가사 선정절차에 대한 소고(2411)
+                                    </td>
+                                    <td class="py-4 px-6"><a href="https://news.koreanbar.or.kr/news/articleView.html?idxno=32014" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">법조신문 칼럼보기</a></td>
+                                </tr>
+                                <tr class="border-b border-gray-700 hover:bg-gray-700 transition duration-300">
+                                    <td class="py-4 px-6">
+                                        <span class="bg-gray-700 p-1 rounded text-gray-200">LAWTTO 대표변호사 칼럼:</span><br />
+                                        [전문분야이야기] 중앙토지수용위원회 공익성 협의 제도에 관한 논의(2404)
+                                    </td>
+                                    <td class="py-4 px-6"><a href="https://news.koreanbar.or.kr/news/articleView.html?idxno=30561" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">법조신문 칼럼보기</a></td>
+                                </tr>
+                                <tr class="border-b border-gray-700 hover:bg-gray-700 transition duration-300">
+                                    <td class="py-4 px-6">
+                                        <span class="bg-gray-700 p-1 rounded text-gray-200">LAWTTO 유동현 변호사 언론 인터뷰:</span><br />
+                                        보상금 한푼 없이 세입자 쫓아내는 공영개발...권익위 권고도 무시(2203)
+                                    </td>
+                                    <td class="py-4 px-6"><a href="https://www.moneys.co.kr/article/2022022817138087520" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">머니S 기사보기</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Contact Page -->
+            <div id="contact" class="page-content hidden">
+                <section class="content-section active bg-gray-900 p-8 rounded-xl shadow-lg mb-8 container mx-auto">
+                    <h2 class="text-3xl font-bold text-white mb-6 border-b-2 pb-3 border-blue-300">문의</h2>
+                    <div class="flex flex-col md:flex-row gap-8 md:items-stretch">
+                        <div class="md:w-1/2 space-y-6 p-6 bg-gray-800 rounded-xl shadow-lg flex flex-col">
+                            <h3 class="text-2xl font-bold text-blue-300 mb-4">법률사무소 LAWTTO에 문의하세요</h3>
+                            <p class="text-gray-300 leading-relaxed text-lg flex-grow">
+                                토지보상 및 수용 관련하여 궁금한 점이 있으시면 언제든지 연락 주십시오.
+                                전문 변호사가 친절하고 상세하게 상담해 드립니다.
+                            </p>
+                            <div class="space-y-3 text-lg">
+                                <p class="text-gray-300"><strong class="text-blue-300">대표전화:</strong> 02-592-9657</p>
+                                <p class="text-gray-300"><strong class="text-blue-300">팩스:</strong> 02-6020-9729</p>
+                                <p class="text-gray-300"><strong class="text-blue-300">이메일:</strong> solomon114@naver.com</p>
+                                <p class="text-gray-300"><strong class="text-blue-300">주소:</strong> 서울특별시 영등포구 국회대로76길 33 중앙보훈회관 502호</p>
+                            </div>
+                            <img src="https://www.dropbox.com/scl/fi/ls8ujbux667kefw526mwi/2.png?rlkey=pozvzpzqmqvn6ml5c724ltyjs&raw=1" alt="법률사무소 LAWTTO 사무실 건물 외관" class="mt-6 w-full rounded-lg shadow-lg border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/333333?text=이미지+로드+실패';">
+                        </div>
+                        <div class="md:w-1/2 space-y-6 p-6 bg-gray-800 rounded-xl shadow-lg flex flex-col">
+                            <h3 class="text-2xl font-bold text-blue-300 mb-4 text-center">AI 법률 도우미</h3>
+                            <p class="text-gray-300 leading-relaxed text-lg text-center mb-6">
+                                토지보상 및 수용에 관한 궁금증에 대해 질문하시면 AI가 답변해 드립니다.
+                                간단한 법률 용어 설명부터 복잡한 문제에 대한 일반적인 정보까지 도움을 드릴 수 있습니다.
+                            </p>
+                            <div class="flex flex-col gap-4 flex-grow">
+                                <textarea id="legalTermInput" placeholder="질문을 입력해 주세요 (예: 수용재결이란 무엇인가요?)" class="flex-grow p-3 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-ring-blue-500 bg-gray-700 text-gray-200 min-h-[150px]"></textarea>
+                                <button id="explainButton" class="btn-primary flex items-center justify-center w-full">
+                                    <span>AI에게 질문하기</span>
+                                </button>
+                            </div>
+                            <div id="explanationOutput" class="bg-gray-700 p-6 rounded-lg shadow-inner min-h-[200px] flex items-center justify-center text-gray-200 text-lg leading-relaxed overflow-auto mt-6">
+                                여기에 법률 용어 설명이 표시됩니다.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-6 px-6 md:px-12 mt-auto">
+            <div class="container mx-auto text-center text-sm">
+                <p>&copy; 2024 법률사무소 LAWTTO. All rights reserved.</p>
+                <p class="mt-2">대표자: 류창용 | 주소: 서울특별시 영등등포구 국회대로76길33 중앙보훈회관 502호 | 대표전화: 02-592-9657 | 팩스: 02-6020-9729</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
